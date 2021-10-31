@@ -12,7 +12,7 @@ const ManageOrder = () => {
             .then(res => res.json())
             .then(data => setDashboard(data));
 
-    }, [])
+    }, [Dashboard,setDashboard])
   
 
     return (

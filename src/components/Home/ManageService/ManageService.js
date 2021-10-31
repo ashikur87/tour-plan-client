@@ -23,7 +23,7 @@ const ManageService = () => {
         .then(data =>{
 
             if(data.deletedCount){
-                alert("deleted")
+                alert("deleted your service place")
                 const remainig =services.filter(service =>service._id !==id);
                 setServices(remainig);
 

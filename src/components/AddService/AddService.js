@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
 import './AddService.css';
+import { Link } from 'react-router-dom';
+import Button from '@restart/ui/esm/Button';
 //react hook form //search and use
 
 
@@ -10,7 +12,7 @@ const AddService = () => {
     const onSubmit = data => {
         console.log(data);
         //search axios and copy from axios git and edit
-        axios.post('http://localhost:5000/services',data)
+        axios.post('http://localhost:7000/services',data)
         .then(res=>{
             console.log(res); 
             if(res.data.insertedId){
@@ -42,6 +44,7 @@ const AddService = () => {
       
       
       <input className='submit' type="submit" />
+      <Link to="/services"><Button className='bg-info text-dark fs-5 fw-bold'>Go To Your order</Button> </Link>
     </form>
         </div>
     );

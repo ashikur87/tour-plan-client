@@ -6,7 +6,7 @@ import './Services.css'
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    // const [cart, setCart] = useCart();
+    
 
     useEffect(() => {
         fetch('http://localhost:7000/services')
@@ -15,9 +15,9 @@ const Services = () => {
     }, [])
     return (
         <div>
-            <marquee className='mark' behavior="scroll" direction="left" scrollamount="10"><h1>Our Services Available</h1></marquee>
+           <h1 className='text-info'>Please Book Your Order</h1>
             <div className='services '>
-                <div className='service-container  '>
+                <div className='service-container '>
 
                     {
                         services.map(service => <Service key={service._id} service={service}></Service>)

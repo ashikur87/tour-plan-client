@@ -1,11 +1,20 @@
 import React from 'react';
+import './SingleDashboard.css'
 
 const SingleDashboard = (props) => {
-    const {name,email,img,person,description,number,price,Days,place,address,nid,question}=props.dash;
+    const { name, email, img } = props.dash;
     return (
-        <div>
-            <h1>{name}</h1>
-            <h1>{email}</h1>
+        <div >
+            
+            
+                    <img className='image' src={img} alt="" />
+                
+                
+                    <h1>{name}</h1>
+                   <a href={email}>{email}</a>
+            
+
+            
         </div>
     );
 };

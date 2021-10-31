@@ -66,16 +66,12 @@ const Booking = () => {
 <h3>{services?.price}</h3>
 
 
-<Link to='/services'><Button>Go Back</Button></Link><br />
+<Link to='/services'><Button className='bg-info text-dark fs-5 fw-bold'>Go Back</Button></Link><br />
 
 </div> 
  </div>
  <div className="cart-container col-3 my-5 py-5 add-service">
-        {/* <Cart cart={''}>
-            <Link to="/review">
-                <button className="btn-regular">Review Your Order</button>
-            </Link>
-        </Cart> */}
+     
     <form className=' ' onSubmit={handleSubmit(onSubmit)}>
       <input placeholder='enter your name' defaultValue={user.displayName} {...register("name", { required: true, maxLength: 20 })} />
       <input placeholder='enter your Email' defaultValue={user.email} {...register("email", { required: true, maxLength: 120 })} />
@@ -84,21 +80,26 @@ const Booking = () => {
       
       
       <input placeholder='How many Person' defaultValue={services?.person}  {...register("person")} />
-      <input placeholder='Add  image url' defaultValue={services?.img} {...register("img")} 
-      />
+
 
       
       <input placeholder='price' type="number" defaultValue={services?.price} {...register("price")} />
       <textarea placeholder='Days' defaultValue={services?.Days}  {...register("days")} />
       <textarea placeholder='Days' defaultValue={services?.description}  {...register("description")} />
       <input placeholder='Add your contact number'  type="number" {...register("number")} required />
-      <input placeholder='Add your Nid Number'  type="number" {...register("nid")} required />
+      {/* <input placeholder='Add your Nid Number'  type="number" {...register("nid")} required /> */}
       <textarea placeholder='Add your Address' {...register("address")} required/>
+      <input placeholder='Add your image url'  {...register("img")} 
+      />
+      {/* defaultValue={services?.img} */}
 
       <textarea placeholder='any question' {...register("question")} />
       
 
-<input className='submit' type="submit" />
+
+<input className='submit' type="submit"/>
+
+ <Link to="/myOrder"><Button className='bg-info text-dark fs-5 fw-bold'>Go To Your order</Button> </Link>
 
 
     </form>

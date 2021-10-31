@@ -5,7 +5,7 @@ import './Latest.css'
 const Latest = (props) => {
     const {img,_id,Date,name,price}=props.uptour;
     return (
-<div className=''>
+<div >
 
 
 <div className='cart  '>
@@ -19,7 +19,7 @@ const Latest = (props) => {
 <h3>{name}</h3>
 <h3>{Date}</h3>
 <h3>{price}</h3>
-<button>Add To Cart</button>  <br />
+
 </div>
 </div>
 </Carousel.Caption>

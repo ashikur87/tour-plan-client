@@ -14,7 +14,7 @@ const MyOrder = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data));
-    }, [])
+    }, [order,setOrder])
     
     
 

@@ -12,8 +12,8 @@ const NewService = () => {
     },[])
     return (
 <div>
-    <h1>Latest-Service</h1>
-<div className='tour'>
+    <h1 className='m-5'><span className='text-danger'>Upcoming</span><span className='text-primary'>-</span><span className='text-danger'>Service</span></h1>
+<div className='tour bg-gray'>
             
             {
                 newservice.map(uptour=><Latest key={uptour._id} uptour={uptour}></Latest>)

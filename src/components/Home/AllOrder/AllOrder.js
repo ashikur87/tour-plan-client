@@ -2,13 +2,31 @@ import React from 'react';
 
 import { Card, Col } from 'react-bootstrap';
 
+const handleDelete = id => {
+    console.log(id)
+
+    const url = `http://localhost:7000/order/${id}`;
+    fetch(url, {
+        method: 'DELETE'
+    })
+        .then(res => res.json())
+        .then(data => {
+            if (data.deletedCount) {
+                alert('Order successfully removed');
+            }
+
+        })
+
+
+}
+
 
 const AllOrder = ({ allData }) => {
     const { name, _id, place,number,address } = allData;
     return (
         <div className="mb-3">
             <Col>
-                <Card className="bg-warning p-2">
+                <Card className="bg-info p-2">
                     <div className="row">
                         <div className="col-md-6">
                             <div className="m-2">
@@ -21,7 +39,7 @@ const AllOrder = ({ allData }) => {
                         </div>
                         <div className="col-md-6">
                             <button className="w-50 m-2 btn bg-success text-white">Approve Order</button> <br />
-                            <button className="w-50 m-2 btn bg-danger text-white">Cancel Order</button>
+                            <button onClick={() => handleDelete(_id)} className="w-50 m-2 btn bg-danger text-white">Cancel Order</button>
                         </div>
 
                     </div>

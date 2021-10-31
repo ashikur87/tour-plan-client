@@ -7,19 +7,21 @@ const UiOrder = ({ myOrder }) => {
 
     // handleDelete------------------------------delete order
     const handleDelete = id => {
-        console.log(id)
+        const process = window.confirm('Are you sure ,You want to remove');
 
-        const url = `http://localhost:7000/order/${id}`;
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount) {
-                    alert('Order successfully removed');
-                }
-
+        if (process) {
+            const url = `https://evil-mummy-82280.herokuapp.com/order/${id}`;
+            fetch(url, {
+                method: 'DELETE'
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        alert('Order successfully removed');
+                    }
+
+                })
+        }
 
 
     }

@@ -4,8 +4,9 @@ import { Card, Col } from 'react-bootstrap';
 
 const handleDelete = id => {
     console.log(id)
-
-    const url = `http://localhost:7000/order/${id}`;
+    const process = window.confirm('Are you sure ,You want to remove');
+   if(process){
+    const url = `https://evil-mummy-82280.herokuapp.com/order/${id}`;
     fetch(url, {
         method: 'DELETE'
     })
@@ -16,6 +17,7 @@ const handleDelete = id => {
             }
 
         })
+   }
 
 
 }

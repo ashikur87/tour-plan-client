@@ -8,7 +8,7 @@ const ManageOrder = () => {
     const [Dashboard, setDashboard] = useState([])
    
     useEffect(() => {
-        fetch('http://localhost:7000/order')
+        fetch('https://evil-mummy-82280.herokuapp.com/order')
             .then(res => res.json())
             .then(data => setDashboard(data));
 

@@ -1,5 +1,22 @@
 .clientreview{
     display: grid;
     grid-template-columns: repeat(2,2fr);
-    grid-gap: 80px;
+    grid-gap: 20px;
+}
+
+@media only screen and (max-width:688px) {
+    .clientreview{
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+        margin: 0px;
+        grid-template-columns: repeat(1,1fr);
+    
+}
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .clientreview{
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+    }
+}
+    
 }

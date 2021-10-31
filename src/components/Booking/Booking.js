@@ -71,6 +71,7 @@ const Booking = () => {
 </div> 
  </div>
  <div className="cart-container col-3 my-5 py-5 add-service">
+     <p className='text-danger'>*Atleast one click every input form<br/> otherwise information doesn't add *</p>
      
     <form className=' ' onSubmit={handleSubmit(onSubmit)}>
       <input placeholder='enter your name' defaultValue={user.displayName} {...register("name", { required: true, maxLength: 20 })} />

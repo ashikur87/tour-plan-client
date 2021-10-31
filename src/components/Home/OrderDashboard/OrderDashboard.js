@@ -13,6 +13,7 @@ const OrderDashboard = () => {
     return (
         <div>
             <h1 className='fw-bold fs-1' >Our Valuable Customer </h1>
+            <p className='text-danger'>*(Add to cart / services--Details--submit form)then show customer info in home page*</p>
        
         <div className='dash'>
             

@@ -1,0 +1,5 @@
+.clientreview{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap: 80px;
+}

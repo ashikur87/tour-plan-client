@@ -2,11 +2,11 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useAuth from '../../LoginHooks/useAuth';
+
 
 const ManageService = () => {
     const [services,setServices]=useState([]);
-    const {handleUpdateUser} = useAuth();
+    
     useEffect(()=>{
         fetch('http://localhost:7000/services')
         .then(res =>res.json())

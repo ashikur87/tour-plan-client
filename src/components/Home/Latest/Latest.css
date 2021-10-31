@@ -2,3 +2,36 @@
     height: 500px;
     overflow: hidden;
 }
+
+.caption{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+
+}
+/* .h3:hover {
+    
+    background: rgba(226, 0, 0, 0.5);
+
+} */
+.caption .h3{
+    width: 100%;
+    font-weight: 500;
+    color: yellow;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.caption:hover .h3{
+    bottom: 49%;
+    opacity: 1;
+}

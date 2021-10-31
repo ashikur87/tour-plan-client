@@ -11,6 +11,12 @@ import Booking from './components/Booking/Booking';
 
 import AddService from './components/AddService/AddService';
 import ManageService from './components/Home/ManageService/ManageService';
+import Footer from './components/Footer/Footer';
+import Notfound from './components/Notfound/Notfound';
+import ManageOrder from './components/Home/ManageOrder/ManageOrder';
+import MyOrder from './components/Home/MyOrder/MyOrder';
+
+
 
 function App() {
   return (
@@ -37,11 +43,24 @@ function App() {
         <Route path="/manageservice">
               <ManageService></ManageService>
           </Route>
+        <Route path="/manageAllOrder">
+              <ManageOrder></ManageOrder>
+          </Route>
+        <Route path="/myOrder">
+              <MyOrder></MyOrder>
+          </Route>
+
+
         <Route path='/login'>
         <Login></Login>
         </Route>
+        <Route  path='*'>
+         <Notfound></Notfound>
+        </Route>
+        
       </Switch>
       </BrowserRouter>
+      <Footer></Footer>
 </AuthProvider>
     </div>
   );

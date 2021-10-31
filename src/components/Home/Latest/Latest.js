@@ -9,15 +9,21 @@ const Latest = (props) => {
 
 
 <div className='cart  '>
-<Carousel className='m-2'>
+<Carousel className='m-2 '>
 <Carousel.Item>
 <img className='serviceimg' src={img} alt="" />
-<Carousel.Caption>
+
+<Carousel.Caption >
+<div className='caption'>
+<div className='h3'>
 <h3>{name}</h3>
-<h4>{Date}</h4>
-<h5>{price}</h5>
+<h3>{Date}</h3>
+<h3>{price}</h3>
 <button>Add To Cart</button>  <br />
+</div>
+</div>
 </Carousel.Caption>
+
   </Carousel.Item>
 </Carousel>
 </div>
